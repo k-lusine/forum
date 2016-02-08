@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Desktop">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/gen" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/google-app-engine/google-app-engine-yaml/src" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/google-app-engine/src" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/jps-plugin/src" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/jps-plugin/tests" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/src" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/tests" />
+      <root url="file://$USER_HOME$/Desktop/go-lang-idea-plugin-master/utils/src" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Desktop" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Desktop" recursive="false" type="SOURCES" />
+  </library>
+</component>

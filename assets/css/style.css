@@ -1,0 +1,13 @@
+body {
+    background-color: #ffe1e7;
+}
+
+.panel-heading{
+    background-color: #b2697f;
+}
+
+.panel-heading h3{
+    margin: 0;
+}
+.list-group-item h4{
+margin:0;}

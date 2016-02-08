@@ -1,0 +1,23 @@
+<form method="POST" action="/edit/user/">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text"  class="form-control" name="username" id="username" value="{{.Username}}">
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text"  class="form-control" name="name" id="name" value="{{.Name}}">
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname</label>
+        <input type="text"  class="form-control" name="surname" id="surname" value="{{.Surname}}">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text"  class="form-control" name="email" id="email" value="{{.Email}}">
+    </div>
+    <div class="form-group">
+        <label for="password">Password </label>
+        <input type="password" class="form-control" name="password" id="password">
+    </div>
+    <button type="submit" class="btn btn-success">Register</button>
+</form>

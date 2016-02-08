@@ -1,0 +1,50 @@
+
+<div class="panel">
+    <div class="panel-heading clearfix">
+
+        <h3 class="pull-left"> {{.Thread.Main.Name}} </h3>
+        <div class="pull-right"></div>
+
+    </div>
+    <div  class="panel-body">
+        <p>
+            {{.Thread.Main.Content}}
+        </p>
+        <div class="submit-buttons">
+            <a href="/edit/reply/new/{{.Thread.Id}}" class="btn btn-default"> Reply </a>
+            <a href="/edit/topic/{{.Thread.Id}}" class="btn btn-default"> Edit </a>
+            <a href="/delete/thread/{{.Thread.Id}}" class="btn btn-default delete" data-confirm="This will delete whole conversation!! Are you sure?"> Delete </a>
+        </div>
+    </div>
+</div>
+<div class="panel">
+    <div class="panel-heading">
+        <h3> Replies to {{.Thread.Main.Name}} </h3>
+
+    </div>
+    {{$currentUserID := .UserId}}
+    {{$currentUserStatus := .Status}}
+    <div class="panel-body">
+        <ul  class="list-group">
+            {{range .Thread.Reply}}
+            <li class="list-group-item">
+                <span>{{.UserID}} user D</span>
+                <h4>{{.Name}}</h4>
+                <p>{{.Content}}</p>
+                {{if eq .UserID $currentUserID}}
+                <div class="submit-buttons">
+                    <a href="/edit/reply/{{.Id}}" class="btn btn-default"> Edit </a>
+                    <a href="/delete/reply/{{.Id}}" class="btn btn-default delete" data-confirm="Are you sure to delete this item?"> Delete </a>
+                </div>
+                {{else if eq $currentUserStatus "admin"}}
+                <div class="submit-buttons">
+                    <a href="/delete/reply/{{.Id}}" class="btn btn-default delete" data-confirm="Are you sure to delete this item?"> Delete </a>
+                </div>
+                {{end}}
+            </li>
+            {{else}}
+            <span>No replies</span>
+            {{end}}
+        </ul>
+    </div>
+</div>

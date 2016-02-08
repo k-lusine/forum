@@ -1,0 +1,15 @@
+    <h1>Reply to this post</h1>
+    <form action="/edit/reply/" method="POST">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" class="form-control" value={{.Name}}>
+        </div>
+        <div class="form-group">
+            <label for="content">Text</label>
+            <textarea name="body" id="content" class="form-control">{{.Content}}</textarea>
+        </div>
+        <input type="hidden" name="thr_id" value={{.Thread_id}}>
+        <input type="hidden" name="reply_id" value={{.Id}}>
+        <input type="submit" value="Save" class="btn btn-default">
+    </form>
+

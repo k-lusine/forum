@@ -1,0 +1,35 @@
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home">Simple Forum</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/home">Home</a></li>
+                {{if .IsLoggedIn}}
+                <li><a href="/profile">My Profile</a></li>
+                {{end}}
+                {{if .IsAdmin}}
+                <li><a href="/admin">Admin Panel</a></li>
+                {{end}}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {{if .IsLoggedIn}}
+
+                <li><a href="/edit/topic/new">Add new topic</a></li>
+                <li><a href="/logout">Log Out</a></li>
+    {{else}}
+                <li><a href="/login/">Login</a></li>
+                <li><a href="/edit/user/new">Register</a></li>
+    {{end}}
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+{{if .IsLoggedIn}}<div>Hello! {{.Username}}. {{.WhatCanDo}}</div>{{end}}

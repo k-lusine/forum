@@ -1,0 +1,20 @@
+
+    {{range .List}}
+        <div class="panel">
+            <div class="panel-heading">
+              <h3>Recent posts in category {{.CatName}} </h3>
+            </div>
+            <div  class="panel-body">
+                <ul  class="list-group">
+                    {{range .Tl}}
+                    <li  class="list-group-item clearfix">
+                        <h4 class="pull-left"><a href="view/{{.Id}}"> {{.Title}}</a></h4>
+                        <div class="pull-right">Last updated on {{.Updated}} by {{.Username}}</div>
+                    </li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    {{end}}
+
+

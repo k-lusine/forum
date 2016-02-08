@@ -1,0 +1,11 @@
+{{template "_head.html" .Title}}
+{{template "_header.html"}}
+<div class="container">
+    <div class="error">
+    {{.Error}}
+    </div>
+
+    {{template "_register.html" .User}}
+
+</div>
+{{template "_footer.html"}}
